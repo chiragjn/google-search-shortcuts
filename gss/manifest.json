@@ -1,0 +1,17 @@
+{
+    "name": "Google Search Shortcuts",
+    "version": "0.1",
+    "description": "Use the number row on the keyboard to quickly open a search result",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "include_globs": ["https://www.google.*/search*"],
+            "js": ["gss.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
